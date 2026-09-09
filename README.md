@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="preview.png" alt="Ocean Night banner" width="720">
+  <img src="https://github.com/user-attachments/assets/97caf4ea-f84e-47db-8f9a-71a3ffd01757" alt="Ocean Night banner" width="720">
 </p>
 
 <h1 align="center">Ocean Night</h1>
