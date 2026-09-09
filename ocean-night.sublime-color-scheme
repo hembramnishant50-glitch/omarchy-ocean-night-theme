@@ -1,0 +1,228 @@
+{
+  "name": "Ocean Night",
+  "author": "Ocean Night",
+  "variables": {
+    "ocn_bg": "#050A2D",
+    "ocn_bg_deep": "#02040C",
+    "ocn_bg_soft": "#0E285B",
+    "ocn_fg": "#AAC5DD",
+    "ocn_fg_bright": "#E4F2FC",
+    "ocn_accent": "#4995DD",
+    "ocn_cyan": "#3FD4E8",
+    "ocn_sky": "#86CEE8",
+    "ocn_muted": "#245D9A",
+    "ocn_green": "#63D1A7",
+    "ocn_yellow": "#E8C47F",
+    "ocn_red": "#F1758A",
+    "ocn_orange": "#EF9766",
+    "ocn_magenta": "#C678DD"
+  },
+  "globals": {
+    "background": "var(ocn_bg)",
+    "foreground": "var(ocn_fg)",
+    "caret": "var(ocn_fg_bright)",
+    "selection": "color(var(ocn_bg_soft) alpha(0.8))",
+    "inactive_selection": "color(var(ocn_bg_soft) alpha(0.4))",
+    "line_highlight": "color(var(ocn_bg_soft) alpha(0.5))",
+    "accent": "var(ocn_accent)",
+    "minimap_border": "var(ocn_bg_deep)",
+    "gutter": "var(ocn_muted)",
+    "guide": "color(var(ocn_bg_soft))",
+    "stack_fade": "color(var(ocn_bg_soft))",
+    "bracket": "var(ocn_sky)",
+    "tabs_background": "var(ocn_bg_deep)",
+    "tabs_active_background": "var(ocn_bg)",
+    "tabs_active_foreground": "var(ocn_fg_bright)",
+    "tabs_inactive_foreground": "var(ocn_muted)",
+    "sidebar_background": "var(ocn_bg_deep)",
+    "sidebar_foreground": "var(ocn_fg)",
+    "sidebar_highlight": "var(ocn_bg_soft)",
+    "find_highlight_foreground": "var(ocn_bg)",
+    "find_highlight": "color(var(ocn_yellow) alpha(0.5))",
+    "panels_background": "var(ocn_bg)",
+    "panel_border": "var(ocn_bg_soft)",
+    "status_bar_foreground": "var(ocn_fg)"
+  },
+  "rules": [
+    {
+      "name": "Comment",
+      "scope": "comment, punctuation.definition.comment",
+      "foreground": "var(ocn_muted)"
+    },
+    {
+      "name": "Keyword",
+      "scope": "keyword, storage.type, storage.class",
+      "foreground": "var(ocn_magenta)"
+    },
+    {
+      "name": "Control",
+      "scope": "keyword.control",
+      "foreground": "var(ocn_magenta)"
+    },
+    {
+      "name": "Function",
+      "scope": "entity.name.function, meta.function-call, support.function",
+      "foreground": "var(ocn_sky)"
+    },
+    {
+      "name": "Function Definition",
+      "scope": "entity.name.function.definition",
+      "foreground": "var(ocn_sky)"
+    },
+    {
+      "name": "Type",
+      "scope": "entity.name.type, support.type, storage.type.primitive",
+      "foreground": "var(ocn_yellow)"
+    },
+    {
+      "name": "Class",
+      "scope": "entity.name.class, entity.name.type.class",
+      "foreground": "var(ocn_yellow)"
+    },
+    {
+      "name": "Namespace",
+      "scope": "entity.name.namespace, entity.namespace",
+      "foreground": "var(ocn_accent)"
+    },
+    {
+      "name": "Constant",
+      "scope": "constant, constant.language",
+      "foreground": "var(ocn_orange)"
+    },
+    {
+      "name": "Constant Character",
+      "scope": "constant.character",
+      "foreground": "var(ocn_green)"
+    },
+    {
+      "name": "Escape",
+      "scope": "constant.character.escape",
+      "foreground": "var(ocn_magenta)"
+    },
+    {
+      "name": "Numeric",
+      "scope": "constant.numeric",
+      "foreground": "var(ocn_orange)"
+    },
+    {
+      "name": "Boolean",
+      "scope": "constant.language.boolean, constant.other",
+      "foreground": "var(ocn_orange)"
+    },
+    {
+      "name": "String",
+      "scope": "string, string.quoted.single, string.quoted.double",
+      "foreground": "var(ocn_green)"
+    },
+    {
+      "name": "String Interpolated",
+      "scope": "string.interpolated, meta.template.call, variable.other.object.property",
+      "foreground": "var(ocn_green)"
+    },
+    {
+      "name": "Regexp",
+      "scope": "string.regexp",
+      "foreground": "var(ocn_cyan)"
+    },
+    {
+      "name": "Operator",
+      "scope": "keyword.operator",
+      "foreground": "var(ocn_sky)"
+    },
+    {
+      "name": "Punctuation",
+      "scope": "punctuation, meta.brace, meta.bracket",
+      "foreground": "var(ocn_muted)"
+    },
+    {
+      "name": "Variable",
+      "scope": "variable, variable.other",
+      "foreground": "var(ocn_fg)"
+    },
+    {
+      "name": "Variable Parameter",
+      "scope": "variable.parameter, meta.function.parameters variable",
+      "foreground": "var(ocn_cyan)"
+    },
+    {
+      "name": "Property",
+      "scope": "variable.other.property, variable.other.member, support.variable.property",
+      "foreground": "var(ocn_cyan)"
+    },
+    {
+      "name": "Label",
+      "scope": "entity.name.label",
+      "foreground": "var(ocn_cyan)"
+    },
+    {
+      "name": "Attribute",
+      "scope": "entity.other.attribute-name, entity.other.attribute-name.html",
+      "foreground": "var(ocn_fg_bright)"
+    },
+    {
+      "name": "Tag",
+      "scope": "entity.name.tag, meta.tag",
+      "foreground": "var(ocn_sky)"
+    },
+    {
+      "name": "Preprocessor",
+      "scope": "meta.preprocessor, keyword.control.import, keyword.control.include",
+      "foreground": "var(ocn_yellow)"
+    },
+    {
+      "name": "Markdown Heading",
+      "scope": "markup.heading",
+      "foreground": "var(ocn_sky)"
+    },
+    {
+      "name": "Markdown Bold",
+      "scope": "markup.bold",
+      "foreground": "var(ocn_fg_bright)"
+    },
+    {
+      "name": "Markdown Italic",
+      "scope": "markup.italic",
+      "foreground": "var(ocn_fg)"
+    },
+    {
+      "name": "Markdown Link",
+      "scope": "markup.underline.link, string.other.link",
+      "foreground": "var(ocn_cyan)"
+    },
+    {
+      "name": "Markdown Code",
+      "scope": "markup.raw, markup.inline.raw",
+      "foreground": "var(ocn_green)"
+    },
+    {
+      "name": "Markdown Quote",
+      "scope": "markup.quote",
+      "foreground": "var(ocn_muted)"
+    },
+    {
+      "name": "Diff Inserted",
+      "scope": "markup.inserted",
+      "foreground": "var(ocn_green)"
+    },
+    {
+      "name": "Diff Deleted",
+      "scope": "markup.deleted",
+      "foreground": "var(ocn_red)"
+    },
+    {
+      "name": "Diff Changed",
+      "scope": "markup.changed",
+      "foreground": "var(ocn_orange)"
+    },
+    {
+      "name": "Error",
+      "scope": "invalid, invalid.illegal",
+      "foreground": "var(ocn_red)"
+    },
+    {
+      "name": "Warning",
+      "scope": "invalid.deprecated, comment.removed",
+      "foreground": "var(ocn_yellow)"
+    }
+  ]
+}

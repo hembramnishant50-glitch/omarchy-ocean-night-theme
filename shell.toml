@@ -1,0 +1,143 @@
+# Ocean Night shell surfaces. Colors derive from colors.toml; sizes and the
+# typographic scale come from the keys below.
+#
+# Rounded corners: the shell has no corner key of its own — every surface
+# (bar, launcher, menu, notifications, tooltip, popups, lock screen) reads
+# Style.cornerRadius from Hyprland's `decoration:rounding`, which this theme
+# sets to 16 in hyprland.lua. Update it there only.
+
+[bar]
+background       = "#050A2D"
+background-alpha = 1.0
+text             = "#AAC5DD"
+active           = "#F1758A"
+scale-with-font  = true
+size-horizontal  = 26
+size-vertical    = 28
+
+[hyprland]
+active-border            = "#4995DD"
+active-border-foreground = "#4995DD"
+
+[controls]
+normal-color        = "#AAC5DD"
+normal-fill-alpha   = 0.04
+normal-border       = "#4995DD"
+normal-border-width = 1
+normal-border-alpha = 0.4
+
+hover-cursor-color        = "#AAC5DD"
+hover-cursor-fill-alpha   = 0.08
+hover-cursor-border       = "#4995DD"
+hover-cursor-border-width = 1
+hover-cursor-border-alpha = 0.25
+
+focus-color        = "#AAC5DD"
+focus-fill-alpha   = 0.08
+focus-border       = "#4995DD"
+focus-border-width = 1
+focus-border-alpha = 0.25
+
+selected-color        = "#AAC5DD"
+selected-fill-alpha   = 0.18
+selected-border       = "#4995DD"
+selected-border-width = 0
+selected-border-alpha = 1.0
+
+pressed-fill-alpha   = 0.22
+selection-fill-alpha = 0.35
+
+[spacing]
+scale = 1.0
+scale-with-font = true
+# Generous padding so the 16px-rounded surfaces breathe.
+popup-padding = 16
+row-padding-x = 14
+panel-padding = 20
+
+[font]
+base-size = 12
+
+[popups]
+background       = "#050A2D"
+background-alpha = 1.0
+text             = "#AAC5DD"
+border           = "hyprland.active-border"
+border-alpha     = 1.0
+
+[tooltip]
+background       = "#050A2D"
+background-alpha = 0.97
+text             = "#AAC5DD"
+border           = "hyprland.active-border-foreground"
+border-alpha     = 1.0
+
+[notifications]
+background       = "#050A2D"
+background-alpha = 1.0
+text             = "#AAC5DD"
+border           = "hyprland.active-border"
+border-alpha     = 1.0
+countdown        = "#4995DD"
+
+[launcher]
+background                = "#050A2D"
+background-alpha          = 0.95
+text                      = "#AAC5DD"
+border                    = "hyprland.active-border-foreground"
+border-alpha              = 1.0
+scrim                     = "#050A2D"
+scrim-alpha               = 0.5
+selected-background       = "#AAC5DD"
+selected-background-alpha = 0.08
+selected-text             = "#4995DD"
+selected-border           = "hyprland.active-border-foreground"
+selected-border-alpha     = 0.25
+
+[menu]
+background                = "#050A2D"
+background-alpha          = 1.0
+text                      = "#AAC5DD"
+border                    = "hyprland.active-border-foreground"
+border-alpha              = 1.0
+scrim                     = "#050A2D"
+scrim-alpha               = 0.5
+selected-background       = "#AAC5DD"
+selected-background-alpha = 0.08
+selected-text             = "#4995DD"
+selected-border           = "hyprland.active-border-foreground"
+selected-border-alpha     = 0.25
+
+[polkit]
+background       = "#050A2D"
+background-alpha = 1.0
+text             = "#AAC5DD"
+text-error       = "#F1758A"
+border           = "hyprland.active-border"
+border-error     = "#F1758A"
+border-alpha     = 1.0
+scrim            = "#050A2D"
+scrim-alpha      = 0.5
+accent           = "#4995DD"
+
+[lock]
+background       = "#050A2D"
+background-alpha = 0.8
+text             = "#AAC5DD"
+placeholder      = "#234E73"
+text-error       = "#F1758A"
+border           = "hyprland.active-border"
+border-active    = "hyprland.active-border"
+border-error     = "#F1758A"
+border-alpha     = 1.0
+selection        = "#4995DD"
+selection-alpha  = 0.45
+
+[image-picker]
+scrim                   = "#050A2D"
+scrim-alpha             = 0.5
+text                    = "#AAC5DD"
+selected-border         = "#4995DD"
+selected-border-alpha   = 1.0
+unselected-border       = "#4995DD"
+unselected-border-alpha = 0.28

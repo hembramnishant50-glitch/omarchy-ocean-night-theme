@@ -1,0 +1,82 @@
+/* Ocean Night for Firefox (userChrome.css)
+ *
+ * Omarchy doesn't theme Firefox automatically, so drop this file into your
+ * Firefox profile's chrome/ folder to theme the browser chrome:
+ *
+ *   1. Open Firefox and go to about:profiles
+ *   2. Note the root directory of the profile in use
+ *   3. Create a "chrome" folder inside it and copy this file there as
+ *      userChrome.css
+ *   4. In about:config set  toolkit.legacyUserProfileCustomizations.customize  = true
+ *   5. Restart Firefox
+ */
+
+:root {
+  --ocn-bg: #050A2D;
+  --ocn-bg-deep: #02040C;
+  --ocn-bg-soft: #0E285B;
+  --ocn-abyss: #040816;
+  --ocn-fg: #AAC5DD;
+  --ocn-fg-dim: #234E73;
+  --ocn-accent: #4995DD;
+  --ocn-accent-bright: #E4F2FC;
+  --ocn-sky: #3FD4E8;
+  --ocn-muted: #245D9A;
+}
+
+/* Tab bar, toolbar and sidebar background */
+:root {
+  --toolbar-bgcolor: var(--ocn-bg) !important;
+  --toolbar-color: var(--ocn-fg) !important;
+  --tab-selected-bgcolor: var(--ocn-bg-soft) !important;
+  --tab-hover-background-color: var(--ocn-bg-soft) !important;
+  --lwt-accent-color: var(--ocn-bg-deep) !important;
+  --lwt-text-color: var(--ocn-fg) !important;
+  --lwt-toolbar-field-background-color: var(--ocn-bg-soft) !important;
+  --lwt-toolbar-field-color: var(--ocn-fg) !important;
+  --lwt-toolbar-field-border-color: var(--ocn-muted) !important;
+  --tab-line-color: var(--ocn-accent) !important;
+  --urlbar-popup-background: var(--ocn-bg) !important;
+  --urlbar-popup-url-color: var(--ocn-accent) !important;
+  --urlbar-box-bgcolor: var(--ocn-bg-soft) !important;
+  --newtab-background-color: var(--ocn-bg) !important;
+  --newtab-text-primary-color: var(--ocn-fg) !important;
+}
+
+#navigator-toolbox {
+  background: var(--ocn-bg-deep) !important;
+}
+
+.tab-background[selected="true"] {
+  background: var(--ocn-bg-soft) !important;
+}
+
+#urlbar-background,
+#searchbar {
+  background: var(--ocn-bg-soft) !important;
+  border-color: var(--ocn-muted) !important;
+  color: var(--ocn-fg) !important;
+}
+
+#TabsToolbar .tab-background {
+  border-radius: 8px !important;
+}
+
+/* Active tab underline */
+.tab-line[selected="true"] {
+  background: var(--ocn-accent) !important;
+}
+
+/* Sidebar (bookmarks/history) */
+#sidebar-box {
+  background: var(--ocn-bg) !important;
+}
+#sidebar-box .sidebar-panel {
+  background: var(--ocn-bg) !important;
+  color: var(--ocn-fg) !important;
+}
+
+/* Private browsing indicator tonal thumb */
+#private-browsing-indicator-with-label {
+  color: var(--ocn-sky) !important;
+}
