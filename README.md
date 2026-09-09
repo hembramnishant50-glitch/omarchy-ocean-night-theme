@@ -21,7 +21,7 @@
 
 ```bash
 omarchy theme install https://github.com/hembramnishant50-glitch/omarchy-ocean-night-theme.git
-omarchy theme set "Ocean Night"
+rm -rf ~/.config/omarchy/themes/ocean-night/.git && omarchy theme set ocean-night
 ```
 
 Verify with `omarchy theme current` — it should report **Ocean Night**.
