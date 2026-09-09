@@ -17,10 +17,47 @@
 
 ---
 
+## Install
+
+```bash
+omarchy theme install https://github.com/hembramnishant50-glitch/omarchy-ocean-night-theme.git
+omarchy theme set "Ocean Night"
+```
+
+Verify with `omarchy theme current` — it should report **Ocean Night**.
+
+---
+
 Built from a set of midnight-blue abstract wallpapers, *Ocean Night* pulls the
 whole desktop into one calm palette — the boot lock screen, the shell, the
 editor, and the terminal all read as the same quiet stretch of water after
 dark.
+
+## What you get
+
+- **Full-screen corners** — every shell surface (bar, launcher, menus,
+  notifications, lock screen) follows `decoration:rounding = 16`, so the whole
+  desktop shares one radius instead of a mixed bag.
+- **Quiet motion** — workspace switches slide (`slidefade 20%`), focused windows
+  fade in; both on the same easy-out curve as the rest of the system.
+- **A cursor that writes** — kitty uses a beam cursor with a gentle blink and a
+  `cursor_trail` so text feels *typed*, one line of characters chasing the caret.
+- **Editor themes** — Helix, Vim, Emacs, Sublime Text, Zed, and the
+  VS Code / Cursor / VSCodium family all get an Ocean Night skin.
+- **App configs** — btop, chromium, firefox (`firefox/userChrome.css`), obsidian,
+  neovim, pi, t3code, and the shell itself.
+- **Five wallpapers** — a numbered set in `backgrounds/`, cycled with the theme.
+
+## Wallpapers
+
+| | | |
+| :--- | :--- | :--- |
+| <img src="backgrounds/thumbs/01-abstract-blue-wave.jpg" width="320" alt="abstract blue wave"> | <img src="backgrounds/thumbs/02-blue-geometric.jpg" width="320" alt="blue geometric"> | <img src="backgrounds/thumbs/03-blue-aesthetic.jpg" width="320" alt="blue aesthetic"> |
+| *abstract blue wave* | *blue geometric* | *blue aesthetic* |
+| <img src="backgrounds/thumbs/04-moonlit-boat-sea.jpg" width="320" alt="moonlit boat at sea"> | <img src="backgrounds/thumbs/05-satisfactory-factory.jpg" width="320" alt="satisfactory factory"> |  |
+| *moonlit boat at sea* | *satisfactory factory* | full-size files in `backgrounds/` |
+
+Cycle the bundled wallpapers any time with `omarchy theme bg next`.
 
 ## Palette
 
@@ -49,74 +86,6 @@ dark.
 A brighter terminal set (`bright_red` `#FF91A0`, `bright_yellow` `#F5D99E`,
 `bright_green` `#8FE8C4`, `bright_cyan` `#6FE4F2`, `bright_blue` `#6FB4F2`,
 `bright_magenta` `#DA9AF0`) is included for shell prompts and PS1 segments.
-
-## Install
-
-```bash
-omarchy theme install https://github.com/hembramnishant50-glitch/omarchy-ocean-night-theme.git
-omarchy theme set "Ocean Night"
-```
-
-Verify with `omarchy theme current` — it should report **Ocean Night**.
-
-Cycle the bundled wallpapers any time with `omarchy theme bg next`.
-
-## What you get
-
-- **Full-screen corners** — every shell surface (bar, launcher, menus,
-  notifications, lock screen) follows `decoration:rounding = 16`, so the whole
-  desktop shares one radius instead of a mixed bag.
-- **Quiet motion** — workspace switches slide (`slidefade 20%`), focused windows
-  fade in; both on the same easy-out curve as the rest of the system.
-- **A cursor that writes** — kitty uses a beam cursor with a gentle blink and a
-  `cursor_trail` so text feels *typed*, one line of characters chasing the caret.
-- **Editor themes** — Helix, Vim, Emacs, Sublime Text, Zed, and the
-  VS Code / Cursor / VSCodium family all get an Ocean Night skin.
-- **App configs** — btop, chromium, firefox (`firefox/userChrome.css`), obsidian,
-  neovim, pi, t3code, and the shell itself.
-- **Five wallpapers** — a numbered set in `backgrounds/`, cycled with the theme.
-
-## Wallpapers
-
-| | | |
-| :--- | :--- | :--- |
-| ![01](backgrounds/01-abstract-blue-wave.jpg) | ![02](backgrounds/02-blue-geometric.jpg) | ![03](backgrounds/03-blue-aesthetic.jpg) |
-| *abstract blue wave* | *blue geometric* | *blue aesthetic* |
-| ![04](backgrounds/04-moonlit-boat-sea.jpg) | ![05](backgrounds/05-satisfactory-factory.jpg) |  |
-| *moonlit boat at sea* | *satisfactory factory* | all five live in `backgrounds/` |
-
-## Tune it
-
-Corners and switch feel live in the theme's `hyprland.lua`, using Hyprland's
-native `hl` API:
-
-```lua
-hl.config({ decoration = { rounding = 16 } })
-
-hl.animation({ leaf = "fadeSwitch", enabled = true, speed = 4.0, bezier = "easeOutQuint" })
-hl.animation({ leaf = "workspaces",  enabled = true, speed = 4.0, bezier = "easeOutQuint", style = "slidefade 20%" })
-hl.animation({ leaf = "windows",     enabled = true, speed = 4.0 })
-```
-
-The writing caret is kitty's `cursor_trail`, tuned so a trail appears only after
-the cursor lingers — no trails on redraw-heavy UIs:
-
-```conf
-cursor_shape beam
-cursor_blink_interval 0.5
-cursor_stop_blinking_after 5.0
-cursor_trail 100
-cursor_trail_decay 0.06 0.2
-cursor_trail_start_threshold 1
-cursor_trail_color #3FD4E8
-```
-
-> [!NOTE]
-> Omarchy runs a cloned theme's `*.lua`, terminal configs, and `vscode.json`
-> through its own templates, so those are regenerated from `colors.toml` on
-> install. The hand-tuned copies shipped in this repo (rounding, animations,
-> cursor trail, editor themes) remain as the source of truth — apply the
-> snippets above on top of any installed copy to get the full look.
 
 ---
 
