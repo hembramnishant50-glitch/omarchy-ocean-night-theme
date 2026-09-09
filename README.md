@@ -33,6 +33,12 @@ whole desktop into one calm palette — the boot lock screen, the shell, the
 editor, and the terminal all read as the same quiet stretch of water after
 dark.
 
+## Preview
+
+| | | |
+| :--- | :--- | :--- |
+| <img width="640" alt="Ocean Night desktop" src="https://github.com/user-attachments/assets/97caf4ea-f84e-47db-8f9a-71a3ffd01757"> | <img width="640" alt="Ocean Night shell" src="https://github.com/user-attachments/assets/e03ae9e6-ea4c-4247-a48a-d45c7fa2e0c7"> | <img width="640" alt="Ocean Night apps" src="https://github.com/user-attachments/assets/80406990-0d54-4879-8618-7da6b35465c4"> |
+
 ## What you get
 
 - **Full-screen corners** — every shell surface (bar, launcher, menus,
